@@ -15,11 +15,10 @@ export const sendEmailApi = async (formData, file) => {
       data.append("image", file);
     }
 
-    const response = await axios.post(BASE_URL, data, {
-      headers: {
-        "Content-Type": "multipart/form-data"
-      }
-    });
+    const response = await axios.post(BASE_URL, data);
+      // headers: {
+      //   "Content-Type": "multipart/form-data"
+      // }
 
     return response.data;
 

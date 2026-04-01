@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {Toaster} from 'react-hot-toast'
 import Navbar from '../src/Components/Navbar'
 import { Nav } from 'react-bootstrap'
 import Hero from '../src/Components/Hero'
@@ -12,6 +13,7 @@ import Fullstack from '../src/Pages/FullStack'
 export default function App() {
   return(
     <>
+    <Toaster position='top-right' reverseOrder='false' />
     <Navbar />
     <Hero />
     <About />

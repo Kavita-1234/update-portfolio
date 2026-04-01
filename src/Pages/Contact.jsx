@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { sendEmailApi } from "../EmailApi";
+import toast from "react-hot-toast";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaBitbucket, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
@@ -8,6 +9,7 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [image, setImage] = useState(null);
+  const [responses, setResponses] = useState([]);
 
   return (
     <section id="contact-me" className="px-10 py-36 bg-black text-white min-h-screen">
@@ -87,9 +89,10 @@ export default function Contact() {
 
               try {
                 // ✅ correct API call
-                await sendEmailApi(formData, image);
+                const response = await sendEmailApi(formData, image);
+                setResponses([response.formData]);
 
-                alert("Message sent successfully 😊");
+                toast.success("Message sent successfully 😊");
 
                 setName("");
                 setEmail("");
@@ -99,7 +102,7 @@ export default function Contact() {
 
               } catch (error) {
                 console.error(error);
-                alert("Failed to send ❌");
+                toast.error("Failed to send ❌");
               }
             }}
           >
@@ -153,6 +156,24 @@ export default function Contact() {
             >
               <FaPaperPlane /> Send Message
             </button>
+
+            {/* RESPONSES */}
+            {/* <div className="mt-10">
+              <h2 className="text-2xl font-bold mb-4">User Responses</h2>
+
+              {responses.length === 0 ? (
+                <p>No responses yet</p>
+              ) : (
+                responses.map((item) => (
+                  <div key={item.id} className="bg-gray-900 p-4 mb-3 rounded">
+                    <p><strong>Name:</strong> {item.name}</p>
+                    <p><strong>Email:</strong> {item.email}</p>
+                    <p><strong>Subject:</strong> {item.subject}</p>
+                    <p><strong>Message:</strong> {item.message}</p>
+                  </div>
+                ))
+              )}
+            </div> */}
           </form>
         </div>
       </div>
