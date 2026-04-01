@@ -10,7 +10,7 @@ export default function Contact() {
   const [image, setImage] = useState(null);
 
   return (
-    <section id="contact-me" className="px-10 py-20 bg-black text-white ">
+    <section id="contact-me" className="px-10 py-36 bg-black text-white min-h-screen">
       <h2 className="text-4xl font-bold text-center tracking-wide">Contact Me</h2>
       <div className="w-32 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 

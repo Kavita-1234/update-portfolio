@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-16 py-20
+      className="flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-16 py-10
       bg-gradient-to-r from-purple-900 via-black to-indigo-900 text-white h-screen"
     >
       {/* LEFT TEXT */}

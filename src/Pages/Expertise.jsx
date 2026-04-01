@@ -40,7 +40,7 @@ export default function Expertise() {
   return (
     <section
       id="expertise"
-      className="px-10 py-20 text-white bg-gradient-to-r from-indigo-900 via-black to-indigo-900 h-screen"
+      className="px-10 py-10 text-white bg-gradient-to-r from-indigo-900 via-black to-indigo-900 min-h-screen "
     >
       <h2 className="text-4xl font-bold text-center tracking-wide">My Tech Stack / RoadMap</h2>
       <div className="w-60 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>

@@ -3,7 +3,7 @@ import { FaLaptopCode, FaGears, FaLightbulb, FaPeopleGroup } from "react-icons/f
 
 export default function Service() {
   return (
-    <section id="how-i-work" className="px-10 py-20 bg-black text-white h-screen">
+    <section id="how-i-work" className="px-10 py-10 bg-black text-white min-h-screen ">
       <h2 className="text-4xl font-bold text-center tracking-wide">How I Work</h2>
       <div className="w-36 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 

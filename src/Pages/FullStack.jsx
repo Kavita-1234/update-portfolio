@@ -7,9 +7,9 @@ import problem from "../assets/images/problem.jpg";
 
 export default function Fullstack() {
   return (
-    <section id="fullstack" className="px-10 py-10 bg-black text-white h-screen">
+    <section id="fullstack" className="px-10 py-10 bg-black text-white h-screen min-h-screen">
       <h2 className="text-4xl font-bold text-center tracking-wide">Java Back-end Developer</h2>
-      <div className="w-50 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
+      <div className="w-40 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 
       <p className="text-gray-300 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
         Hi, I’m Kavita Kumawat, a passionate java back-end developer focused on building scalable and efficient server-side applications. 

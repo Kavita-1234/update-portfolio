@@ -43,7 +43,7 @@ const aboutData = [
 
 export default function About() {
   return (
-    <section id="about" className="px-10 py-20 bg-black text-white h-screen">
+    <section id="about" className="px-10 py-10 bg-black text-white min-h-screen">
       <h2 className="text-4xl font-bold text-center tracking-wide">About Me</h2>
       <div className="w-32 h-1 bg-yellow-500 mx-auto mt-3 rounded"></div>
 
